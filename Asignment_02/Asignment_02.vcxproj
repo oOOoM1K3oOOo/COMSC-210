@@ -20,10 +20,10 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{6EB3C8A2-7204-4C12-9797-7A394A032C94}</ProjectGuid>
-    <RootNamespace>COMSC210</RootNamespace>
+    <ProjectGuid>{1409394E-B633-4C23-B0CD-6EF1F91F40E4}</ProjectGuid>
+    <RootNamespace>Asignment02</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
-    <ProjectName>Assignment_01</ProjectName>
+    <ProjectName>Assignment_02</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -116,8 +116,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Assignment_01N_PartA.cpp" />
-    <ClCompile Include="Assignment_01N_Part_B.cpp" />
+    <ClCompile Include="DynamicStringArray.h" />
+    <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

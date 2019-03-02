@@ -15,10 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Assignment_01N_Part_B.cpp">
+    <ClInclude Include="DynamicArray.h">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Assignment_01N_PartA.cpp">
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

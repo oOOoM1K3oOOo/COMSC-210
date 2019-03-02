@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Assignment_01N_Part_B.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Assignment_01N_PartA.cpp">
+    <ClCompile Include="Assignment_04N.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
