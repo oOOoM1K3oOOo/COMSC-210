@@ -28,23 +28,23 @@ For moving from account to account during updates, it will use a global cursor. 
 
 Depending upon the account id provided in the update, the program will do one of the following:
 
-·       If the account specified in the update is not found in the list, it will create a new account, initialize its fields with the values in the update and insert it in the list at appropriate position so that the list will remain sorted in ascending order by account id.
+Â·       If the account specified in the update is not found in the list, it will create a new account, initialize its fields with the values in the update and insert it in the list at appropriate position so that the list will remain sorted in ascending order by account id.
 
-·       If the account specified in the update is found in the list, it will update its current balance according to the plus or minus value specified in the update (i.e. it will add a plus value and subtract a minus value).
+Â·       If the account specified in the update is found in the list, it will update its current balance according to the plus or minus value specified in the update (i.e. it will add a plus value and subtract a minus value).
 
-·       On completing the update, if an account balance becomes 0 or negative, the program will delete that account.
+Â·       On completing the update, if an account balance becomes 0 or negative, the program will delete that account.
 
 Logging Update
 
 Before starting any updates, the program will log the following to the log file:
 
-·       It will log the contents of the whole doubly linked list.
+Â·       It will log the contents of the whole doubly linked list.
 
 Then for each update, it will log the following information to the log file:
 
-·       Before the update, it will log a line containing the contents of the update to be performed.
+Â·       Before the update, it will log a line containing the contents of the update to be performed.
 
-·       After the update, it will log the contents of the whole doubly linked list.
+Â·       After the update, it will log the contents of the whole doubly linked list.
 
 For logging the contents of an update, it will output one line of text containing account id, account name and the update value.
 
@@ -68,19 +68,19 @@ Circular Doubly Linked List With A Dummy Node
 
 Implement the list for keeping the account as a Circular Doubly Linked List with a Dummy Node.
 
-In a Circular Dummy Node implementation of a doubly linked list, the head points to a dummy node. The dummy node looks like any other node but its data fields do not contain any useful values. It’s forward link points to the first node in the list and back link points to the last node in the list. Initially, in an empty list, both its forward and back links points to itself (i.e. to the dummy node).
+In a Circular Dummy Node implementation of a doubly linked list, the head points to a dummy node. The dummy node looks like any other node but its data fields do not contain any useful values. Itâ€™s forward link points to the first node in the list and back link points to the last node in the list. Initially, in an empty list, both its forward and back links points to itself (i.e. to the dummy node).
 
 For doing a sorted insertion in such a list, do the following. Point the insertion pointer to the first real node. Move the insertion pointer forward as needed, till you reach the Point Of Insertion Node. (The Point Of Insertion Node is that node before which you intend to insert the new node) After the insertion pointer is at the Point of Insertion Node, insert the new node just before it. In performing the insertion, only the links in the Point Of Insertion node and the links in the node that is one before the Point Of Insertion node will change. Links in other nodes will not change.
 
  Because of the presence of a dummy node and the circular nature of the list, in all insert cases, there will always exist a node (either a real or dummy node ) before the Point of Insertion node. It will be the links of this node and that of the Point of Insertion node that will change. Therefore, the code for inserting a new node will be the same in all cases including: empty list, head insertion, mid insertion and end insertion. For each of these cases, the point of insertion node and the node prior to the Point of Insertion Node are listed below:
 
-·       For an empty list, both point of insertion node and the node prior to the point Of insertion node are the same namely the dummy node.
+Â·       For an empty list, both point of insertion node and the node prior to the point Of insertion node are the same namely the dummy node.
 
-·       For a head insertion, the point of insertion node is the first node and the node prior to the point of insertion node is the dummy node.
+Â·       For a head insertion, the point of insertion node is the first node and the node prior to the point of insertion node is the dummy node.
 
-·       For a mid insertion, the point of insertion node is a real node before which the new node is being inserted and the node prior to the point of insertion node is another real node after which the new node is being inserted.
+Â·       For a mid insertion, the point of insertion node is a real node before which the new node is being inserted and the node prior to the point of insertion node is another real node after which the new node is being inserted.
 
-·       For end insertion, the point of insertion node is the dummy node and the node prior to the point of insertion node is a real node after which the new node is being inserted.
+Â·       For end insertion, the point of insertion node is the dummy node and the node prior to the point of insertion node is a real node after which the new node is being inserted.
 
  In all of the above case, both the point of insertion node and the node prior to the point of insertion node are identical in format and have the same format as all other nodes. Therefore, the code for inserting a node in all of the above cases is the same.
 
@@ -414,4 +414,4 @@ List After Update #2:
 
 30201 Susan Woo 9646.75
 
-31456 Jack Smith 1200 
+31456 Jack Smith 1200  
