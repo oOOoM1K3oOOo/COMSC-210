@@ -64,7 +64,7 @@ Account Id
 
 Use a long for account id.
 
-Circular Doubly Linked List With A Dummy Node
+Circular Doubly Linked List With A Dummy Node 
 
 Implement the list for keeping the account as a Circular Doubly Linked List with a Dummy Node.
 
