@@ -1,0 +1,417 @@
+TITLE
+
+Updating Accounts Using Doubly Linked List
+
+TOPICS
+
+Doubly Linked List
+
+DESCRIPTION
+
+General
+
+Write a program that will update bank accounts stored in a master file using updates from a transaction file. The program will maintain accounts using a doubly linked list.
+
+The input data will consist of two text files: a master file and a transaction file. See data in Test section below.  The master file will contain only the current account data. For each account, it will contain account id, first name, last name and the current balance. The transaction file will contain updates. Each update will consist of an account id, first name, last name and a plus or minus balance update. A plus update value will indicates a deposit and minus a withdrawal.
+
+Building List
+
+At the beginning, the program will input account data from the master file and build a doubly linked list. Each node in the list will contain data relating to one account and the whole list will be kept sorted by account id.
+
+For building the list, the program will input account information from the master file one account at a time.  It will create a node containing the account data and add it to the list at the appropriate position in the list so that the list will remain sorted in ascending order by account id.
+
+Updating List
+
+After the list is built as described above, the program will read updates from the Update file and update the list accordingly. It will input one account update at a time and update the list using this update before inputting the next update.
+
+For moving from account to account during updates, it will use a global cursor. For each update, it will determine  whether the target account is in the forward or backward direction from the current position. It will then move the cursor in the appropriate direction using either the forward or backward links of the doubly linked list. It will move the cursor till it reaches the target account or an account past the target account (in the case that the target account does not exist).
+
+Depending upon the account id provided in the update, the program will do one of the following:
+
+·       If the account specified in the update is not found in the list, it will create a new account, initialize its fields with the values in the update and insert it in the list at appropriate position so that the list will remain sorted in ascending order by account id.
+
+·       If the account specified in the update is found in the list, it will update its current balance according to the plus or minus value specified in the update (i.e. it will add a plus value and subtract a minus value).
+
+·       On completing the update, if an account balance becomes 0 or negative, the program will delete that account.
+
+Logging Update
+
+Before starting any updates, the program will log the following to the log file:
+
+·       It will log the contents of the whole doubly linked list.
+
+Then for each update, it will log the following information to the log file:
+
+·       Before the update, it will log a line containing the contents of the update to be performed.
+
+·       After the update, it will log the contents of the whole doubly linked list.
+
+For logging the contents of an update, it will output one line of text containing account id, account name and the update value.
+
+For logging the contents of the whole doubly linked list, it will output one line for each account containing account id, account name and account balance.
+
+ For the contents of a sample log file, see the Sample Log File section. It contains the partial contents of a sample log file.
+
+New Master File
+
+When all updates are completed, the program will save the contents of the updated linked list to a new master file. (Do not save the link values).
+
+IMPLEMENTATION
+
+Implement the account list using a Circular Doubly Linked List with a Dummy Node.
+
+Account Id
+
+Use a long for account id.
+
+Circular Doubly Linked List With A Dummy Node
+
+Implement the list for keeping the account as a Circular Doubly Linked List with a Dummy Node.
+
+In a Circular Dummy Node implementation of a doubly linked list, the head points to a dummy node. The dummy node looks like any other node but its data fields do not contain any useful values. It’s forward link points to the first node in the list and back link points to the last node in the list. Initially, in an empty list, both its forward and back links points to itself (i.e. to the dummy node).
+
+For doing a sorted insertion in such a list, do the following. Point the insertion pointer to the first real node. Move the insertion pointer forward as needed, till you reach the Point Of Insertion Node. (The Point Of Insertion Node is that node before which you intend to insert the new node) After the insertion pointer is at the Point of Insertion Node, insert the new node just before it. In performing the insertion, only the links in the Point Of Insertion node and the links in the node that is one before the Point Of Insertion node will change. Links in other nodes will not change.
+
+ Because of the presence of a dummy node and the circular nature of the list, in all insert cases, there will always exist a node (either a real or dummy node ) before the Point of Insertion node. It will be the links of this node and that of the Point of Insertion node that will change. Therefore, the code for inserting a new node will be the same in all cases including: empty list, head insertion, mid insertion and end insertion. For each of these cases, the point of insertion node and the node prior to the Point of Insertion Node are listed below:
+
+·       For an empty list, both point of insertion node and the node prior to the point Of insertion node are the same namely the dummy node.
+
+·       For a head insertion, the point of insertion node is the first node and the node prior to the point of insertion node is the dummy node.
+
+·       For a mid insertion, the point of insertion node is a real node before which the new node is being inserted and the node prior to the point of insertion node is another real node after which the new node is being inserted.
+
+·       For end insertion, the point of insertion node is the dummy node and the node prior to the point of insertion node is a real node after which the new node is being inserted.
+
+ In all of the above case, both the point of insertion node and the node prior to the point of insertion node are identical in format and have the same format as all other nodes. Therefore, the code for inserting a node in all of the above cases is the same.
+
+Doubly Linked List Class
+
+Create a class to encapsulate circular doubly linked list with a dummy node and to provide the following. 
+
+Global Cursor
+
+Provide a global cursor (pointer) that points to a working account. This cursor will be used during updates.
+
+Building Initial List
+
+Provide a method for building a linked list while reading from the master file. The algorithm for this method is provided later below.
+
+Updating List
+
+Provide a method for performing updates while reading from the transaction file. For doing an update, move the global cursor forwards or backwards as needed from account to account till you either reach the target node or a node past that node. Then carry out the required update (update, insert or delete). The algorithm for this method is provided later below
+
+ALGORITHM
+
+Building Initial List
+
+The code below can be used for building a sorted list while reading from the master file. It works for all cases: empty list, head insertion, mid and tail insertion.
+
+In the code below, cur and prev are two local pointers (not instance variables). newPtr is a local pointer that points to the node to be inserted. head is an instance variable that points to the dummy node. head -> flink points to the first node in the list.
+
+ 
+
+//Using cur, locate the Point of insertion node.
+
+for ( cur = head->flink; cur != head; cur = cur -> flink )
+
+{
+
+          if (targetid < cur->id ) //found the Point of Insertion Node
+
+                   break;
+
+}
+
+ 
+
+//cur is now pointing to the Point of Insertion node.
+
+//Using cur, initialize prev that will point to the node just before the cur node.
+
+prev = cur -> blink;
+
+ 
+
+//Now using cur and prev, insert the new node.
+
+ 
+
+//Create the two forward links
+
+newPtr -> flink = prev -> flink;
+
+prev -> flink = newPtr;
+
+ 
+
+//Create the two back links
+
+newPtr -> blink = cur -> blink;
+
+cur -> blink = newPtr;
+
+//The new node is now inserted just before the Point Of Insertion Node.
+
+Updating List
+
+The pseudo code below can be used for performing an update transaction read from the transaction file.
+
+/*
+
+In case cursor is left at a dummy node from previous transaction, move it to the first node. For example, this may happen if you removed the last node in the list and then moved the cursor forward by one.
+
+*/
+
+if (cursor is at dummy node)
+
+          Move it to the first node.
+
+ 
+
+//case: cursor is at the target node
+
+if (cursor id == target id )
+
+{
+
+          perform the update
+
+          if (balance <= 0)
+
+                   remove the account.
+
+}
+
+ 
+
+//case: target node is in the forward direction
+
+else if (cursor id < target id)
+
+{
+
+          //locate the target node or point of insertion node
+
+          while (cursor not reached dummy node)
+
+          {
+
+                   if (target id <= cursor id )
+
+                             break;
+
+          }
+
+          //case: found target node
+
+          if (target id == cursor id)
+
+          {
+
+                   perform the update
+
+                   if (balance < 0)
+
+                             remove the account and move the cursor forward by 1.
+
+          }
+
+          //case: target node does not exist
+
+          else
+
+          {       
+
+                   insert the new node before the cursor node
+
+          }
+
+}
+
+ 
+
+//case: target node is in the backward direction
+
+else
+
+{
+
+          //locate target node or point of insertion node
+
+          while (cursor nor reached dummy node)
+
+          {
+
+                   if (target id >= cursor id )
+
+                             break;
+
+          }
+
+          //case: target node found
+
+          if (target id == cursor id)
+
+          {
+
+                   perform the update
+
+                   if (balance < 0)
+
+                             delete account.
+
+          }
+
+          //case: target node does not exist
+
+          else
+
+          {
+
+                   move the cursor one node forward.
+
+                   (do this to point it to the correct point of insertion node)
+
+                   insert the node before the cursor node
+
+          }
+
+}
+
+TESTING
+
+Test Run 1
+
+Use the following file contents for a test run.
+
+Master File Contents (master.txt)
+
+27183 Teresa Wong 1234.56
+
+12345 Jeff Lee 211.22
+
+31456 Jack Smith 1200.00
+
+14142 James Bond 1500.00
+
+31623 Norris Hunt 1500.00
+
+10203 Mindy Ho 2000.00
+
+20103 Ed Sullivan 3000.00
+
+30102 Ray Baldwin 3824.36
+
+30201 Susan Woo 9646.75
+
+22345 Norma Patel 2496.24
+
+ 
+
+Transaction File Contents (tran.txt)
+
+31623 Norris Hunt -1500.00
+
+20301 Joe Hammil +500.00
+
+31416 Becky Wu +100.00
+
+10203 Mindy Ho -2000.00
+
+14142 James Bond +1500.00
+
+27183 Teresa Wong -1234.56
+
+10101 Judy Malik +1000.00
+
+31416 Becky Wu  +100.00
+
+32123 John Doe +900.00
+
+10101 Judy Malik -200.00
+
+22222 Joanne Doe +2750.02
+
+SAMPLE LOG FILE
+
+For a sample, the contents of the log file at the end of completing the first and the second update are presented below:
+
+List At Start:
+
+10203 Mindy Ho 2000
+
+12345 Jeff Lee 211.22
+
+14142 James Bond 1500
+
+20103 Ed Sullivan 3000
+
+22345 Norma Patel 2496.24
+
+27183 Teresa Wong 1234.56
+
+30102 Ray Baldwin 3824.36
+
+30201 Susan Woo 9646.75
+
+31456 Jack Smith 1200 
+
+31623 Norris Hunt 1500
+
+ 
+
+Update #1
+
+31623 Norris Hunt -1500
+
+ 
+
+List After Update #1:
+
+10203 Mindy Ho 2000
+
+12345 Jeff Lee 211.22
+
+14142 James Bond 1500
+
+20103 Ed Sullivan 3000
+
+22345 Norma Patel 2496.24
+
+27183 Teresa Wong 1234.56
+
+30102 Ray Baldwin 3824.36
+
+30201 Susan Woo 9646.75
+
+31456 Jack Smith 1200 
+
+ 
+
+Update #2
+
+20301 Joe Hammil +500.00
+
+ 
+
+List After Update #2:
+
+10203 Mindy Ho 2000
+
+12345 Jeff Lee 211.22
+
+14142 James Bond 1500
+
+20103 Ed Sullivan 3000
+
+20301 Joe Hammil +500.00
+
+22345 Norma Patel 2496.24
+
+27183 Teresa Wong 1234.56
+
+30102 Ray Baldwin 3824.36
+
+30201 Susan Woo 9646.75
+
+31456 Jack Smith 1200 
