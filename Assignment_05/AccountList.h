@@ -23,123 +23,176 @@ struct Account
   string fName;
   string lName;
   double balance;
-  Account *previousAccount;
-  Account *nextAccount;
+  Account *accPrev;
+  Account *accNext;
 };
 
 class AccountList
 {
-  private:
-    Account *list_head;
-    Account *cursor;
-    void erase(Account *obj);
+private:
+  Account *list_head;
+  Account *cursor;
+  void erase(Account *obj);
+  void insertBefore(Account *obj1, Account *obj2);
+  void update(const double &balance);
 
-  public: 
-    AccountList();
-    void insert(const int &id, const string &fName, 
-                const string &lName, const double &value);
-    void update(const int &id, const string &fName,
-      const string &lName, const double &value);
-    void display(ostream &print);
+public:
+  AccountList();
+  ~AccountList();
+  void insert(const int &id, const string &fName,
+    const string &lName, const double &value);
+  void update(const int &id, const string &fName,
+    const string &lName, const double &value);
+  void display(ostream &print);
+  void clear();
 
 };
 
 void AccountList::erase(Account *obj)
 {
-  if (obj == obj->previousAccount)
+  if (obj == obj->accPrev)
   {
     list_head = nullptr;
   }
   else
   {
-    obj->nextAccount->previousAccount = obj->previousAccount;
-    obj->previousAccount->nextAccount = obj->nextAccount;
+    obj->accNext->accPrev = obj->accPrev;
+    obj->accPrev->accNext = obj->accNext;
 
-    (obj == list_head) && (list_head = obj->nextAccount);
+    (obj == list_head) && (list_head = obj->accNext);
   }
 
   delete obj;
 }
 
+// Insert accNew before element accCurr
+void AccountList::insertBefore(Account *accCurr, Account *accNew)
+{
+  accNew->accNext = accCurr;
+  accNew->accPrev = accCurr->accPrev;
+  accCurr->accPrev->accNext = accNew;
+  accCurr->accPrev = accNew;
+
+  (accNew->id < list_head->id) && (list_head = accNew);
+}
+
 AccountList::AccountList()
 {
-  list_head = new Account;
-  list_head->id = 0;
-  list_head->fName = "";
-  list_head->lName = "";
-  list_head->balance = 0;
-  list_head->previousAccount = list_head;
-  list_head->nextAccount = list_head;
-
+  list_head = nullptr;
   cursor = list_head;
+}
+
+AccountList::~AccountList()
+{
+  clear();
 }
 
 void AccountList::insert(const int &id, const string &fName,
   const string &lName, const double &amount)
 {
-  Account *newAcc = new Account;
-  Account *curAcc;
+  Account *accNew = new Account; 
+  Account *accCurr;
+  Account *tempAcc;
 
-  newAcc->id = id;
-  newAcc->fName = fName;
-  newAcc->lName = lName;
-  newAcc->balance = amount;
-  newAcc->previousAccount = nullptr; 
-  newAcc->nextAccount = nullptr;
+  accNew->id = id;
+  accNew->fName = fName;
+  accNew->lName = lName;
+  accNew->balance = amount;
+  accNew->accPrev = nullptr;
+  accNew->accNext = nullptr;
 
   if (!list_head)
   {
-    list_head = newAcc;
-    list_head->previousAccount = list_head;
-    list_head->nextAccount = list_head;
+    list_head = accNew;
+    list_head->accPrev = list_head;
+    list_head->accNext = list_head;
   }
   else
   {
-    curAcc = list_head;
+    accCurr = list_head;
+    
+    while (accCurr->id < accNew->id && accCurr->accNext != list_head)
+    {
+      accCurr = accCurr->accNext;
+    }
 
-    while (newAcc->id > curAcc->id)
-      curAcc = curAcc->nextAccount;
-
-    newAcc->nextAccount = curAcc;
-    newAcc->previousAccount = curAcc->previousAccount;
-    curAcc->previousAccount->nextAccount = newAcc;
-    curAcc->previousAccount = newAcc;
+    (accNew->id > accCurr->id ) && (accCurr = accCurr->accNext);
+    
+    insertBefore(accCurr, accNew);
   }
 }
 
 void AccountList::update(const int &id, const string &fName,
-  const string &lName, const double &value)
+                        const string &lName, const double &value)
 {
-  if (!cursor)
-    cursor = list_head->nextAccount;
-
-  while (id > cursor->id || id < cursor->id && cursor != list_head)
-    cursor = (id > cursor->id) ? cursor->nextAccount : cursor->previousAccount;
-
-  if (cursor->id == id)
-  {
-    cursor->fName = fName;
-    cursor->lName = lName;
-    cursor->balance += value;
-
-    // Cheating is possible if the account created here had the 
-    // negative balance at the start.
-    if (cursor->balance <= 0)    
-      erase(cursor);
-  }
+  if( !list_head || (id < list_head->id) || 
+      (id > list_head->accPrev->id))
+    insert(id, fName, lName, value);
   else
   {
-    insert(id, fName, lName, abs(value));
+    if (!cursor)
+      cursor = list_head;
+
+    if (id > cursor->id)
+    {
+      while (id > cursor->id)
+        cursor = cursor->accNext;
+    }
+    else if (id < cursor->id)
+    {
+      while (id < cursor->id)
+        cursor = cursor->accPrev;
+    }
+
+    if (id == cursor->id)
+      update(value);
+    else
+    {
+      Account *accNew = new Account;
+      accNew->id = id;
+      accNew->fName = fName;
+      accNew->lName = lName;
+      accNew->balance = value;
+      accNew->accPrev = nullptr;
+      accNew->accNext = nullptr;
+
+      insertBefore(((id > cursor->id) ? cursor->accNext : cursor), accNew);
+    }
+  }
+}
+
+void AccountList::update(const double &balance)
+{
+  cursor->balance += balance;
+
+  // Cheating is possible if the account created here had the 
+  // negative balance at the start.
+  if (cursor->balance <= 0)
+  {
+    erase(cursor);
+
+    cursor = list_head;
   }
 }
 
 void AccountList::display(ostream &print)
 {
-  for (Account *curAcc = list_head->nextAccount; curAcc != list_head;
-    curAcc = curAcc->nextAccount)
+  for (Account *accCurr = list_head; (accCurr != list_head->accPrev);
+    accCurr = accCurr->accNext)
     print
-        << curAcc->id << " " << curAcc->fName << " " << curAcc->lName
-        << curAcc->balance << endl;
+        << accCurr->id << " " << accCurr->fName << " " << accCurr->lName
+        << " " << accCurr->balance << endl;
+
+  print
+    << list_head->accPrev->id << " " << list_head->accPrev->fName << " "
+    << list_head->accPrev->lName << " " << list_head->accPrev->balance 
+    << endl;
+}
+
+void AccountList::clear()
+{
+  while (!list_head)
+    erase(list_head);
 }
 
 #endif 

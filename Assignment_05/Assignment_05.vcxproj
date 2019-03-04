@@ -118,8 +118,10 @@
     <Text Include="Assignment.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AccountList.h" />
     <ClCompile Include="Assignment_05N.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AccountList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

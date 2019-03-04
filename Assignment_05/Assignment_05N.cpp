@@ -1,6 +1,6 @@
 /*******************************************************************
 Problem: Assignment 05N - Main
-Question: Write a program that will update bank accounts stored in a 
+Question: Write a program that will update bank accounts stored in a
           master file using updates from a transaction file. The program
           will maintain accounts using a doubly linked list.
 
@@ -24,74 +24,106 @@ const string TRANSACTION_FILE_NAME = "tran.txt";
 const string LOG_FILE_NAME = "log.txt";
 
 void readFile(AccountList &acc_list, const string &fileName, 
-              bool isTran = false)
+  ostream &printLog, bool isTran = false)
 {
   ifstream infile(fileName);
   string sline = "";
+  int index = 1;
 
-  cout 
-      << "Reading from  the filefile \"" << fileName << "\"..." 
-      << endl;
+  cout
+    << "Reading from the file \"" << fileName << "\"..."
+    << endl;
 
   if (infile)
   {
     while (getline(infile, sline))
     {
       int id = 0;
-
       string fName = "";
       string lName = "";
       double value = 0;
 
-      (sline != "") && 
-        (stringstream(sline) >> id >> fName >> lName >> value);
+      if (sline != "")
+      {
+        stringstream(sline) >> id >> fName >> lName >> value;
 
-      if (isTran)
-      {
-        acc_list.update(id, fName, lName, value);
-      }
-      else
-      {
-        acc_list.insert(id, fName, lName, value);
+        if (isTran)
+        {
+          printLog 
+                 << "Update #" << index << ":" << endl
+                 << sline << endl << endl;
+
+          acc_list.update(id, fName, lName, value);
+
+          printLog << "List after Update #" << index << ":" << endl;
+          acc_list.display(printLog);
+          printLog << endl;
+
+          index++;
+        }
+        else
+        {
+          acc_list.insert(id, fName, lName, value);
+        }
       }
     }
+
+    infile.close();
   }
   else
   {
     cout
       << endl
-      << "The file \"" << fileName << "\" is not found. " 
+      << "The file \"" << fileName << "\" is not found. "
       << endl
       << "Please check source file name."
       << endl;
   }
 }
 
-void writeFile(const AccountList &acc_list, const string &fileName,
-               bool isLog = true)
+void writeFile(AccountList &acc_list, const string &fileName)
 {
   ofstream outfile(fileName);
 
   cout
-    << "Saving settings in " << ((isLog) ? "log" : "new master file")
+    <<"Saving to the new master file "
     << "\"" << fileName << "\"..."
     << endl;
 
-
+  if (outfile)
+  {
+    acc_list.display(outfile);
+  }
+  else
+  {
+    cout
+      << endl
+      << "Error opening the file. Please check source file name."
+      << endl;
+  }
 }
 
 int main()
 {
   AccountList account_list;
+  ofstream printLog(LOG_FILE_NAME);
 
-  cout << "List at start:" << endl;
+  readFile(account_list, MASTER_FILE_NAME, cout);
 
-  readFile(account_list, MASTER_FILE_NAME);
+  printLog << "List at start:" << endl;
+  account_list.display(printLog);
 
-  account_list.display(cout);
+  printLog << endl;
 
+  readFile(account_list, TRANSACTION_FILE_NAME, printLog, true);
 
+  printLog << "List at end:" << endl;
 
+  account_list.display(printLog);
+
+  printLog << endl;
+
+  writeFile(account_list, NEW_MASTER_FILE_NAME);
 
   return 0;
 }
