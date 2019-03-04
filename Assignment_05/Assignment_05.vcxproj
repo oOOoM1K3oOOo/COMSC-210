@@ -118,9 +118,7 @@
     <Text Include="Assignment.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CircularDoublyLinkedList.h" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClCompile Include="AccountList.h" />
     <ClCompile Include="Assignment_05N.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

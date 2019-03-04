@@ -20,12 +20,10 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CircularDoublyLinkedList.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="Assignment_05N.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AccountList.h">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
