@@ -120,6 +120,12 @@
   <ItemGroup>
     <ClInclude Include="Stack.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Mike\AppData\Local\Temp\StackAsArray.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assignment.jpg" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
