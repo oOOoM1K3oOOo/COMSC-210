@@ -20,18 +20,26 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Stack.h">
+    <Image Include="Assignment.jpg">
       <Filter>Source Files</Filter>
-    </ClInclude>
+    </Image>
+    <Image Include="Assignment_06N.jpg">
+      <Filter>Source Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\Mike\AppData\Local\Temp\StackAsArray.zip">
+    <None Include="C:\Users\Mike\AppData\Local\Temp\StackAsArray1-1.zip">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Assignment.jpg">
+    <Text Include="HighestGPAData.txt">
       <Filter>Source Files</Filter>
-    </Image>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="myStack.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
