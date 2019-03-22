@@ -35,7 +35,7 @@ class stackType
     };
 
     nodeType *stackTop;  /// Pointer to the top element of the stack
-    int list_capacity;        /// Variable to store the maximum stack size
+    int list_capacity;   /// Variable to store the maximum stack size
     int list_size;       /// Variable to store the current stack size
 
     void checkUnderflow() const;
@@ -143,7 +143,7 @@ void stackType<Type>::copyStack(const stackType<Type> &st)
                                   // empties the stack
     initializeStack();
 
-  list_capacity = st.maxSize();        // assigns the list_capacity of the 
+  list_capacity = st.maxSize();   // assigns the list_capacity of the 
                                   // other stack to this stack
 
   while (currSize-- && currNode)  // does a deep copy the elements 
