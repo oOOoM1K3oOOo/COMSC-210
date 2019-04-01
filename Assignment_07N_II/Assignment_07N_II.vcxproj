@@ -20,10 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{55F3216A-84CE-4984-AC1D-B47047BC71AD}</ProjectGuid>
-    <RootNamespace>Assignment07N</RootNamespace>
+    <ProjectGuid>{4659F69F-BA92-4737-A035-910B3ADB3C62}</ProjectGuid>
+    <RootNamespace>Assignment07NII</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
-    <ProjectName>Assignment_07N_I</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -116,18 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="ArrayQueue.h" />
-    <ClInclude Include="LListQueue Code\LListQueue.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="ArrayQueue.cpp" />
-    <ClCompile Include="LListQueue Code\LListQueue.cpp" />
-    <ClCompile Include="LListQueue Code\main.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Test.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Assignment_07N.jpg" />
+    <ClCompile Include="Assignment_07N.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
