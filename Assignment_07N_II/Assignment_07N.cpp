@@ -1,5 +1,5 @@
 /*******************************************************************
-Problem: Assignment 07N - Array Queue Definition
+Problem: Assignment 07N
 Question: Rewrite the code to use array instead of linked lists.
           Please do not change anything besides the data structure.
           Instead of linked list use an array. The functionality
