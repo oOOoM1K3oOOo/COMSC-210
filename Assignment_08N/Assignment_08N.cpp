@@ -56,7 +56,7 @@ void siftDown(vector<Type> &toSort, const int &start, const int &end)
   }
 }
 
-template<typename Type
+template<typename Type>
 void heapify(vector<Type> &toSort, const int &count)
 {
   int start = (count - 2) / 2;
