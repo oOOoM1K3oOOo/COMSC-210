@@ -15,18 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="BinaryTree.cpp">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="BinaryTree.h">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </None>
+    <Image Include="Assignment_10N.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assignment_10N.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Assignment_11N_(Test).cpp">
+    <ClCompile Include="Assignment_10N.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

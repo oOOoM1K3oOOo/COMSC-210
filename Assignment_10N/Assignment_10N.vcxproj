@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{9FD49E54-DFCF-4A86-9BCA-346C5E00707B}</ProjectGuid>
-    <RootNamespace>Test</RootNamespace>
+    <ProjectGuid>{3072EF16-F82F-480A-92B9-33DCBAC0D532}</ProjectGuid>
+    <RootNamespace>Assignment10N</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,14 +115,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="BinaryTree.cpp" />
-    <None Include="main.cpp" />
+    <Image Include="Assignment_10N.jpg" />
+    <Image Include="Assignment_10N.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="BinaryTree.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Assignment_11N_(Test).cpp" />
+    <ClCompile Include="Assignment_10N.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

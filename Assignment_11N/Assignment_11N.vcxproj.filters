@@ -13,21 +13,29 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Assignment Description">
+      <UniqueIdentifier>{351b8806-3be5-4afc-8efb-826e40234c09}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="BinaryTree.cpp">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="BinaryTree.h">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </None>
+    <Image Include="Assignment_11N.png">
+      <Filter>Assignment Description</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Assignment_11N_(Test).cpp">
+    <ClCompile Include="Assignment_11N.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Graph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PmainQ.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
