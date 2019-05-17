@@ -1,13 +1,15 @@
 /*******************************************************************
 Problem: Assignment 11N
-Question: Write a program that will display the minimum path between 
-          any two vertices in a given graph. The program will input 
-          the graph from a file provided by the user. It will prompt 
+Question: Write a program that will display the minimum path between
+          any two vertices in a given graph. The program will input
+          the graph from a file provided by the user. It will prompt
           the user for entering the name of the start vertex and the
-          end vertex. It will find the minimum path between the two 
+          end vertex. It will find the minimum path between the two
           vertices. It will display the minimum path showing all the
-          vertices along the path. It will also display the total 
+          vertices along the path. It will also display the total
           distance along the minimum path.
+
+          Note:
 
 Name: Mykhaylo Ignatyev
 ID: 1718264
@@ -46,15 +48,15 @@ bool readFile(Graph &graph, const string &fileName)
 
   if (infile)
   {
-    while (getline(infile, sline) && ((ss = stringstream(sline)) >> vertNum1 >> skipws) 
-          && vertNum1 >= 0)
+    while (getline(infile, sline) && ((ss = stringstream(sline)) >> vertNum1 >> skipws)
+      && vertNum1 >= 0)
     {
       ss.ignore(1, '\t');
       getline(ss, vertName);
       graph.addVertex(vertName);
     }
 
-    while (getline(infile, sline) && (stringstream(sline) >> vertNum1 >> vertNum2 >> weight) && vertNum1 >= 0 /*&& (infile >> vertNum2 >> weight)*/ )
+    while (getline(infile, sline) && (stringstream(sline) >> vertNum1 >> vertNum2 >> weight) && vertNum1 >= 0 /*&& (infile >> vertNum2 >> weight)*/)
     {
       graph.addEdge(vertNum1, vertNum2, weight);
     }

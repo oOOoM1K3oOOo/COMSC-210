@@ -1,0 +1,1001 @@
+Reading ID's from 'add.txt' to be added...
+insert(): Item is added:
+          ID #: 6929
+          Name:
+
+insert(): Item is added:
+          ID #: 6618
+          Name:
+
+insert(): Item is added:
+          ID #: 6741
+          Name:
+
+insert(): Item is added:
+          ID #: 1948
+          Name:
+
+insert(): Item is added:
+          ID #: 7601
+          Name:
+
+insert(): Item is added:
+          ID #: 2154
+          Name:
+
+insert(): Item is added:
+          ID #: 3286
+          Name:
+
+insert(): Item is added:
+          ID #: 3917
+          Name:
+
+insert(): Item is added:
+          ID #: 7909
+          Name:
+
+insert(): Item is added:
+          ID #: 6296
+          Name:
+
+insert(): Item is added:
+          ID #: 687
+          Name:
+
+insert(): Item is added:
+          ID #: 1620
+          Name:
+
+insert(): Item is added:
+          ID #: 8419
+          Name:
+
+insert(): Item is added:
+          ID #: 8606
+          Name:
+
+insert(): Item is added:
+          ID #: 3303
+          Name:
+
+insert(): Item is added:
+          ID #: 9873
+          Name:
+
+insert(): Item is added:
+          ID #: 6957
+          Name:
+
+insert(): Item is added:
+          ID #: 2587
+          Name:
+
+insert(): Item is added:
+          ID #: 8573
+          Name:
+
+insert(): Item is added:
+          ID #: 9686
+          Name:
+
+insert(): Item is added:
+          ID #: 6447
+          Name:
+
+insert(): Item is added:
+          ID #: 7995
+          Name:
+
+insert(): Item is added:
+          ID #: 2319
+          Name:
+
+insert(): Item is added:
+          ID #: 4984
+          Name:
+
+insert(): Item is added:
+          ID #: 4372
+          Name:
+
+insert(): Item is added:
+          ID #: 8026
+          Name:
+
+insert(): Item is added:
+          ID #: 2076
+          Name:
+
+insert(): Item is added:
+          ID #: 9880
+          Name:
+
+insert(): Item is added:
+          ID #: 6317
+          Name:
+
+insert(): Item is added:
+          ID #: 4260
+          Name:
+
+insert(): Item is added:
+          ID #: 188
+          Name:
+
+insert(): Item is added:
+          ID #: 7106
+          Name:
+
+insert(): Item is added:
+          ID #: 1812
+          Name:
+
+insert(): Item is added:
+          ID #: 7294
+          Name:
+
+insert(): Item is added:
+          ID #: 4766
+          Name:
+
+insert(): Item is added:
+          ID #: 6053
+          Name:
+
+insert(): Item is added:
+          ID #: 4494
+          Name:
+
+insert(): Item is added:
+          ID #: 2890
+          Name:
+
+insert(): Item is added:
+          ID #: 8290
+          Name:
+
+insert(): Item is added:
+          ID #: 5940
+          Name:
+
+insert(): Item is added:
+          ID #: 8207
+          Name:
+
+insert(): Item is added:
+          ID #: 6232
+          Name:
+
+insert(): Item is added:
+          ID #: 8093
+          Name:
+
+insert(): Item is added:
+          ID #: 5971
+          Name:
+
+insert(): Item is added:
+          ID #: 2791
+          Name:
+
+insert(): Item is added:
+          ID #: 2089
+          Name:
+
+insert(): Item is added:
+          ID #: 5800
+          Name:
+
+insert(): Item is added:
+          ID #: 4042
+          Name:
+
+insert(): Item is added:
+          ID #: 2677
+          Name:
+
+insert(): Item is added:
+          ID #: 4773
+          Name:
+
+insert(): Item is added:
+          ID #: 4930
+          Name:
+
+insert(): Item is added:
+          ID #: 163
+          Name:
+
+insert(): Item is added:
+          ID #: 6470
+          Name:
+
+insert(): Item is added:
+          ID #: 2252
+          Name:
+
+insert(): Item is added:
+          ID #: 6715
+          Name:
+
+insert(): Item is added:
+          ID #: 9916
+          Name:
+
+insert(): Item is added:
+          ID #: 3199
+          Name:
+
+insert(): Item is added:
+          ID #: 5873
+          Name:
+
+insert(): Item is added:
+          ID #: 1420
+          Name:
+
+insert(): Item is added:
+          ID #: 3657
+          Name:
+
+insert(): Item is added:
+          ID #: 2408
+          Name:
+
+insert(): Item is added:
+          ID #: 2635
+          Name:
+
+insert(): Item is added:
+          ID #: 8157
+          Name:
+
+insert(): Item is added:
+          ID #: 6259
+          Name:
+
+insert(): Item is added:
+          ID #: 6016
+          Name:
+
+insert(): Item is added:
+          ID #: 1390
+          Name:
+
+insert(): Item is added:
+          ID #: 8470
+          Name:
+
+insert(): Item is added:
+          ID #: 2595
+          Name:
+
+insert(): Item is added:
+          ID #: 5584
+          Name:
+
+insert(): Item is added:
+          ID #: 218
+          Name:
+
+insert(): Item is added:
+          ID #: 5572
+          Name:
+
+insert(): Item is added:
+          ID #: 1151
+          Name:
+
+insert(): Item is added:
+          ID #: 420
+          Name:
+
+insert(): Item is added:
+          ID #: 1763
+          Name:
+
+insert(): Item is added:
+          ID #: 879
+          Name:
+
+insert(): Item is added:
+          ID #: 9156
+          Name:
+
+insert(): Item is added:
+          ID #: 4200
+          Name:
+
+insert(): Item is added:
+          ID #: 2353
+          Name:
+
+insert(): Item is added:
+          ID #: 9530
+          Name:
+
+insert(): Item is added:
+          ID #: 1621
+          Name:
+
+insert(): Item is added:
+          ID #: 1264
+          Name:
+
+insert(): Item is added:
+          ID #: 1240
+          Name:
+
+insert(): Item is added:
+          ID #: 1194
+          Name:
+
+insert(): Item is added:
+          ID #: 3827
+          Name:
+
+insert(): Item is added:
+          ID #: 8395
+          Name:
+
+insert(): Item is added:
+          ID #: 8730
+          Name:
+
+insert(): Item is added:
+          ID #: 3210
+          Name:
+
+insert(): Item is added:
+          ID #: 734
+          Name:
+
+insert(): Item is added:
+          ID #: 1080
+          Name:
+
+insert(): Item is added:
+          ID #: 428
+          Name:
+
+insert(): Item is added:
+          ID #: 4670
+          Name:
+
+insert(): Item is added:
+          ID #: 7307
+          Name:
+
+insert(): Item is added:
+          ID #: 3464
+          Name:
+
+insert(): Item is added:
+          ID #: 6374
+          Name:
+
+insert(): Item is added:
+          ID #: 2519
+          Name:
+
+insert(): Item is added:
+          ID #: 8774
+          Name:
+
+insert(): Item is added:
+          ID #: 7606
+          Name:
+
+insert(): Item is added:
+          ID #: 4175
+          Name:
+
+insert(): Item is added:
+          ID #: 4087
+          Name:
+
+insert(): Item is added:
+          ID #: 6505
+          Name:
+
+insert(): Item is added:
+          ID #: 5701
+          Name:
+
+insert(): Item is added:
+          ID #: 9176
+          Name:
+
+insert(): Item is added:
+          ID #: 7925
+          Name:
+
+insert(): Item is added:
+          ID #: 4061
+          Name:
+
+insert(): Item is added:
+          ID #: 3034
+          Name:
+
+insert(): Item is added:
+          ID #: 2936
+          Name:
+
+insert(): Item is added:
+          ID #: 1203
+          Name:
+
+insert(): Item is added:
+          ID #: 1873
+          Name:
+
+insert(): Item is added:
+          ID #: 9338
+          Name:
+
+insert(): Item is added:
+          ID #: 3848
+          Name:
+
+insert(): Item is added:
+          ID #: 1070
+          Name:
+
+insert(): Item is added:
+          ID #: 2329
+          Name:
+
+insert(): Item is added:
+          ID #: 788
+          Name:
+
+insert(): Item is added:
+          ID #: 6528
+          Name:
+
+insert(): Item is added:
+          ID #: 5926
+          Name:
+
+insert(): Item is added:
+          ID #: 4360
+          Name:
+
+insert(): Item is added:
+          ID #: 2274
+          Name:
+
+insert(): Item is added:
+          ID #: 5506
+          Name:
+
+insert(): Item is added:
+          ID #: 3102
+          Name:
+
+insert(): Item is added:
+          ID #: 1890
+          Name:
+
+insert(): Item is added:
+          ID #: 4667
+          Name:
+
+insert(): Item is added:
+          ID #: 1540
+          Name:
+
+insert(): Item is added:
+          ID #: 4262
+          Name:
+
+insert(): Item is added:
+          ID #: 9867
+          Name:
+
+insert(): Item is added:
+          ID #: 7821
+          Name:
+
+insert(): Item is added:
+          ID #: 1188
+          Name:
+
+insert(): Item is added:
+          ID #: 104
+          Name:
+
+insert(): Item is added:
+          ID #: 580
+          Name:
+
+insert(): Item is added:
+          ID #: 8282
+          Name:
+
+insert(): Item is added:
+          ID #: 8823
+          Name:
+
+insert(): Item is added:
+          ID #: 144
+          Name:
+
+insert(): Item is added:
+          ID #: 2695
+          Name:
+
+insert(): Item is added:
+          ID #: 6481
+          Name:
+
+insert(): Item is added:
+          ID #: 3635
+          Name:
+
+insert(): Item is added:
+          ID #: 5151
+          Name:
+
+insert(): Item is added:
+          ID #: 2512
+          Name:
+
+insert(): Item is added:
+          ID #: 3454
+          Name:
+
+insert(): Item is added:
+          ID #: 159
+          Name:
+
+insert(): Item is added:
+          ID #: 1569
+          Name:
+
+insert(): Item is added:
+          ID #: 5423
+          Name:
+
+insert(): Item is added:
+          ID #: 9716
+          Name:
+
+insert(): Item is added:
+          ID #: 855
+          Name:
+
+insert(): Item is added:
+          ID #: 237
+          Name:
+
+insert(): Item is added:
+          ID #: 8748
+          Name:
+
+insert(): Item is added:
+          ID #: 9546
+          Name:
+
+insert(): Item is added:
+          ID #: 1795
+          Name:
+
+insert(): Item is added:
+          ID #: 6157
+          Name:
+
+insert(): Item is added:
+          ID #: 554
+          Name:
+
+insert(): Item is added:
+          ID #: 1619
+          Name:
+
+insert(): Item is added:
+          ID #: 7466
+          Name:
+
+insert(): Item is added:
+          ID #: 3760
+          Name:
+
+insert(): Item is added:
+          ID #: 2239
+          Name:
+
+insert(): Item is added:
+          ID #: 5587
+          Name:
+
+insert(): Item is added:
+          ID #: 3155
+          Name:
+
+insert(): Item is added:
+          ID #: 4412
+          Name:
+
+insert(): Item is added:
+          ID #: 1346
+          Name:
+
+insert(): Item is added:
+          ID #: 3646
+          Name:
+
+insert(): Item is added:
+          ID #: 9693
+          Name:
+
+insert(): Item is added:
+          ID #: 6791
+          Name:
+
+insert(): Item is added:
+          ID #: 3926
+          Name:
+
+insert(): Item is added:
+          ID #: 3955
+          Name:
+
+insert(): Item is added:
+          ID #: 5792
+          Name:
+
+insert(): Item is added:
+          ID #: 2278
+          Name:
+
+insert(): Item is added:
+          ID #: 7242
+          Name:
+
+insert(): Item is added:
+          ID #: 6595
+          Name:
+
+insert(): Item is added:
+          ID #: 9833
+          Name:
+
+insert(): Item is added:
+          ID #: 4538
+          Name:
+
+insert(): Item is added:
+          ID #: 4751
+          Name:
+
+insert(): Item is added:
+          ID #: 673
+          Name:
+
+insert(): Item is added:
+          ID #: 5753
+          Name:
+
+insert(): Item is added:
+          ID #: 5694
+          Name:
+
+insert(): Item is added:
+          ID #: 6020
+          Name:
+
+insert(): Item is added:
+          ID #: 4511
+          Name:
+
+insert(): Item is added:
+          ID #: 2790
+          Name:
+
+insert(): Item is added:
+          ID #: 1065
+          Name:
+
+insert(): Item is added:
+          ID #: 1259
+          Name:
+
+insert(): Item is added:
+          ID #: 6809
+          Name:
+
+insert(): Item is added:
+          ID #: 1376
+          Name:
+
+insert(): Item is added:
+          ID #: 6023
+          Name:
+
+insert(): Item is added:
+          ID #: 4028
+          Name:
+
+insert(): Item is added:
+          ID #: 8518
+          Name:
+
+insert(): Item is added:
+          ID #: 1661
+          Name:
+
+insert(): Item is added:
+          ID #: 9504
+          Name:
+
+insert(): Item is added:
+          ID #: 7224
+          Name:
+
+insert(): Item is added:
+          ID #: 3624
+          Name:
+
+insert(): Item is added:
+          ID #: 7956
+          Name:
+
+insert(): Item is added:
+          ID #: 1801
+          Name:
+
+insert(): Item is added:
+          ID #: 9966
+          Name:
+
+insert(): Item is added:
+          ID #: 2083
+          Name:
+
+insert(): Item is added:
+          ID #: 234
+          Name:
+
+insert(): Item is added:
+          ID #: 1985
+          Name:
+
+insert(): Item is added:
+          ID #: 9832
+          Name:
+
+insert(): Item is added:
+          ID #: 9310
+          Name:
+
+insert(): Item is added:
+          ID #: 5082
+          Name:
+
+insert(): Item is added:
+          ID #: 9424
+          Name:
+
+insert(): Item is added:
+          ID #: 8829
+          Name:
+
+insert(): Item is added:
+          ID #: 1768
+          Name:
+
+insert(): Item is added:
+          ID #: 8837
+          Name:
+
+insert(): Item is added:
+          ID #: 2786
+          Name:
+
+insert(): Item is added:
+          ID #: 1258
+          Name:
+
+Reading ID's from 'search.txt' to be searched...
+search(): Item 2089 is found:
+          ID #: 2089
+          Name:
+
+search(): Item 1376 is found:
+          ID #: 1376
+          Name:
+
+search(): Item 8026 is found:
+          ID #: 8026
+          Name:
+
+search(): Item 2791 is found:
+          ID #: 2791
+          Name:
+
+search(): Item 3199 is found:
+          ID #: 3199
+          Name:
+
+search(): Item 1390 is found:
+          ID #: 1390
+          Name:
+
+search(): Item 4042 is found:
+          ID #: 4042
+          Name:
+
+search(): Item 3624 is found:
+          ID #: 3624
+          Name:
+
+search(): Item 6053 is found:
+          ID #: 6053
+          Name:
+
+search(): Item 2252 is found:
+          ID #: 2252
+          Name:
+
+search(): Item 237 is found:
+          ID #: 237
+          Name:
+
+search(): Item 6957 is found:
+          ID #: 6957
+          Name:
+
+search(): Item 6791 is found:
+          ID #: 6791
+          Name:
+
+search(): Item 6505 is found:
+          ID #: 6505
+          Name:
+
+search(): Item 2695 is found:
+          ID #: 2695
+          Name:
+
+search(): Item 3155 is found:
+          ID #: 3155
+          Name:
+
+search(): Item 2083 is found:
+          ID #: 2083
+          Name:
+
+search(): Item 1070 is not found.
+
+search(): Item 4372 is found:
+          ID #: 4372
+          Name:
+
+search(): Item 3827 is found:
+          ID #: 3827
+          Name:
+
+search(): Item 8395 is not found.
+
+search(): Item 3210 is found:
+          ID #: 3210
+          Name:
+
+search(): Item 4262 is found:
+          ID #: 4262
+          Name:
+
+search(): Item 6809 is found:
+          ID #: 6809
+          Name:
+
+search(): Item 3760 is found:
+          ID #: 3760
+          Name:
+
+search(): Item 7909 is found:
+          ID #: 7909
+          Name:
+
+search(): Item 4412 is found:
+          ID #: 4412
+          Name:
+
+search(): Item 8823 is found:
+          ID #: 8823
+          Name:
+
+search(): Item 4200 is found:
+          ID #: 4200
+          Name:
+
+search(): Item 6016 is found:
+          ID #: 6016
+          Name:
+
+search(): Item 2677 is found:
+          ID #: 2677
+          Name:
+
+search(): Item 2635 is found:
+          ID #: 2635
+          Name:
+
+search(): Item 3657 is found:
+          ID #: 3657
+          Name:
+
+search(): Item 8518 is found:
+          ID #: 8518
+          Name:
+
+search(): Item 8518 is found:
+          ID #: 8518
+          Name:
+
+search(): Item 2408 is found:
+          ID #: 2408
+          Name:
+
+search(): Item 879 is found:
+          ID #: 879
+          Name:
+
+search(): Item 9424 is not found.
+
+search(): Item 4061 is found:
+          ID #: 4061
+          Name:
+
+search(): Item 1620 is found:
+          ID #: 1620
+          Name:
+
+search(): Item 5971 is found:
+          ID #: 5971
+          Name:
+
+search(): Item 9693 is found:
+          ID #: 9693
+          Name:
+
+search(): Item 1420 is found:
+          ID #: 1420
+          Name:
+
+search(): Item 3454 is found:
+          ID #: 3454
+          Name:
+
+search(): Item 4984 is found:
+          ID #: 4984
+          Name:
+
+search(): Item 2274 is found:
+          ID #: 2274
+          Name:
+
+search(): Item 1768 is found:
+          ID #: 1768
+          Name:
+
+search(): Item 9546 is found:
+          ID #: 9546
+          Name:
+
+search(): Item 4061 is found:
+          ID #: 4061
+          Name:
+
+search(): Item 8419 is found:
+          ID #: 8419
+          Name:
+
+
+displayStatistics(): Statistics:
+                     Total number of ID's searched: 50
+                     Total number of nodes's searched: 61
+                     Number of nodes searched per ID searched: 1.22

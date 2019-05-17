@@ -1,8 +1,3 @@
-#ifndef PMAINQ_H
-#define PMAINQ_H
-
-#include <vector>
-#include <string>
 /*******************************************************************
 Problem: Assignment 11N - Priority Queue (PmainQ)
 Description: Stores the elements in a queue using the min heap method.
@@ -13,6 +8,11 @@ Date: 05/05/2019
 
 Status: 100% Complete
 *******************************************************************/
+#ifndef PMAINQ_H
+#define PMAINQ_H
+
+#include <vector>
+#include <string>
 #include <sstream>
 #include <iostream>
 
@@ -90,7 +90,7 @@ int PmainQ<T>::findLargeChildIndex(const int &parentIndex) const
     ///compare value at rChIndex and at lChIndex
     ///return the index where the value is smaller
     rtnIndex = (heap_vector.at(rChIndex) < heap_vector.at(lChIndex)) ?
-                rChIndex : lChIndex;
+      rChIndex : lChIndex;
   }
   ///case only left child exist
   else if (lChIndex <= lastIndex)

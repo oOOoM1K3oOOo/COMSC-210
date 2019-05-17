@@ -1,6 +1,6 @@
 /*******************************************************************
 Problem: Assignment 11N - Vertex
-Description: Stores the entries, i.e. total distance from the starting 
+Description: Stores the entries, i.e. total distance from the starting
              point, index of elements which create a path, and the path
              length.
 
@@ -19,21 +19,21 @@ using namespace std;
 
 class Vertex
 {
-  private:
-    int totalDist;
-    vector<int> path;
-    int pathLength;
+private:
+  int totalDist;
+  vector<int> path;
+  int pathLength;
 
-  public:
-    Vertex();
-    Vertex(const int &, const vector<int> &);
-    int getTotalDist() const;
-    vector<int> getPath() const;
-    int getPathLength() const;
-    void setTotalDist(const int &);
-    void setPath(const vector<int> &);
-    void addPath(const int &);
-    bool operator<(const Vertex &) const;
+public:
+  Vertex();
+  Vertex(const int &, const vector<int> &);
+  int getTotalDist() const;
+  vector<int> getPath() const;
+  int getPathLength() const;
+  void setTotalDist(const int &);
+  void setPath(const vector<int> &);
+  void addPath(const int &);
+  bool operator<(const Vertex &) const;
 };
 
 Vertex::Vertex()
@@ -81,7 +81,7 @@ void Vertex::addPath(const int &index)
   pathLength++;
 }
 
-bool Vertex::operator<(const Vertex &vertex) const 
+bool Vertex::operator<(const Vertex &vertex) const
 {
   return totalDist < vertex.getTotalDist();
 }

@@ -1,6 +1,11 @@
 /*******************************************************************
 Problem: Assignment 11N - Graph Class
 Description: Creates a graph with vertices and edges.
+            
+            Note: Because I used the recommended BreadthFirst traversal
+                  algorithm, the MinPath method searches for the smallest
+                  number of vertices to get to the desired vertex, but not
+                  for the smallest distance.
 
 Name: Mykhaylo Ignatyev
 ID: 1718264
@@ -100,6 +105,7 @@ void Graph::MinPath(const string &from, const string &to)
     PmainQ<int> adjQ;
 
     queue.penque(vertex);
+    visited.at(fromIdx) = true;
 
     while (!queue.isEmpty() && !isFound)
     {
@@ -109,34 +115,41 @@ void Graph::MinPath(const string &from, const string &to)
       pPathLen = vertex.getPathLength();
       pI = vertex.getPath().at(pPathLen - 1);
 
-      if (!visited.at(pI))
+      // getAdjacentQ((pPathLen - 1), adjQ);
+      getAdjacentQ((pI), adjQ);
+
+      while (!adjQ.isEmpty() && !isFound)
       {
-        visited.at(pPathLen - 1) = true;
+        int i = adjQ.pdeque();
 
-        getAdjacentQ((pPathLen - 1), adjQ);
-
-        while (!adjQ.isEmpty() && !isFound)
+        if (!visited.at(i))
         {
-          int i = adjQ.pdeque();
+          visited.at(i) = true;
 
-          if (!visited.at(i))
+          Vertex temp((vertex.getTotalDist() + edges->at(pI).at(i)), vertex.getPath());
+          temp.addPath(i);
+          queue.penque(temp);
+          if (i == toIdx) 
           {
-            Vertex temp((pDist + edges->at(pI).at(i)), vertex.getPath());
-            temp.addPath(i);
-            queue.penque(temp);
-            isFound = (temp.getPath().at(pPathLen - 1) == toIdx);
+            isFound = true;
+            vertex = temp;
           }
         }
       }
     }
 
-    cout << "Minimal path from '" << from << "' to '" << to << ": ";
-    for (int vtxIndex : vertex.getPath())
+    if (isFound)
     {
-      cout << vertices.at(vtxIndex) << " ";
-    }
+      cout << "Minimal path from '" << from << "' to '" << to << "': ";
+      for (int vtxIndex : vertex.getPath())
+      {
+        cout << vertices.at(vtxIndex) << " ";
+      }
 
-    cout << vertex.getTotalDist() << endl << endl;
+      cout << vertex.getTotalDist() << endl << endl;
+    }
+    else
+      cout << "Target is not found" << endl;
   }
 }
 
@@ -161,14 +174,16 @@ void Graph::display()
 
   for (int i = 0; i < vertices.size(); i++)
   {
-    cout << setw(4) << i << ":  " << setw(13) <<  vertices.at(i) << ";  [ ";
+    cout << setw(4) << i << ":  " << setw(13) << vertices.at(i) << ";  [ ";
 
     for (int j = 0; j < edges->at(i).size(); j++)
     {
-      (edges->at(i).at(j) > 0 ) && cout << "( " << j << ", " << edges->at(i).at(j) << " ) ";
+      (edges->at(i).at(j) > 0) && 
+        cout << "( " << vertices.at(j) << ", " 
+             << edges->at(i).at(j) << " ) ";
     }
 
-    cout << " ]" << endl;
+    cout << "]" << endl;
   }
 
   cout << endl;
